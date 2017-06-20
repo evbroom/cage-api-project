@@ -1,0 +1,116 @@
+<!--
+
+A few notes:
+
+I haven't quite figured out what's going on with the css in the results section. It gets a little wonky at certain breakpoints in the browser, but it looks better when I check the, say "iPad" or "iPhone 6" device view.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Shadows+Into+Light|Chivo" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <title>Project 4</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="title">
+                <div class="heading-container">
+                    <div class="top-heading">
+                        <img class="spinning-nic" src="assets/nic-2.png">
+                        <h1 class="animatedHeading"><span class="heading-break">A Nic for All</span> Oc<span id="casi">casi</span><span class="cageSpan">cage</span>ons</h1>
+                        <img class="spinning-nic" src="assets/nic-2.png">
+                    </div>
+                    <!--</div> ./heading-container-->
+                    <p>Can't decide on a movie? Never fear. Nicolas Cage is here.</p>
+                    <p>Pick your Nic and we'll pick your movie.</p>
+                    <iframe src="https://giphy.com/embed/Qw4X3FnmFFCPANtlhtK" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <p>You heard him... </p>
+                    <a href="#chooseOccasion" class="button pickNic">Let's Ride</a>
+                </div>
+                <!--./title-->
+            </div>
+    </header>
+
+    <section class="userChoice">
+        <div class="wrapper">
+            <div class="button-container">
+
+                <!-- Randomizer to be implemented later -->
+                <!--<button class="button random">Roll the dice</button>-->
+            </div>
+        </div>
+    </section>
+    <!-- ./userChoice -->
+
+    <section class="chooseOccasion" id="chooseOccasion">
+        <div class="wrapper">
+            <!--selection section w/ nic gallery tied to range input, and submit button-->
+            <div class="occasionContainer">
+                <h2>Pick Your Nic</h2>
+                <p>Use the slider and pick a Nic.</p>
+                <p>The closer to the right you go, the higher "quality" the movie.</p>
+                <p>Hit that submit button when you're done.</p>
+                <div id='cageBlocks' class='cageBlocks'>
+                    <div class='cageBlock one'>
+                        <iframe src="https://giphy.com/embed/zSRtpHAgaFgkg" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <p>Primetime Cage. For some of these movies, literally hundreds of people paid to see them in theatres.</p>
+                    </div>
+                    <div class="cageBlock two">
+                        <iframe src="https://giphy.com/embed/hiBJrrqtSeI0" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <p>Cage in his element.He knows his ABC's. What about you?</p>
+                    </div>
+                    <div class="cageBlock three">
+                        <iframe src="https://giphy.com/embed/HNIttmjo46GTS" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <p>Cage the good guy. Sometimes he's just on the wrong side trying to do the right thing.</p>
+                    </div>
+                    <div class="cageBlock four">
+                        <iframe src="https://giphy.com/embed/tPLEgK2pDgFgI" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <p>A subdued Cage. He's calm, (mostly) collected. A kind of hero, saving people and American monuments.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ./occasionContainer -->
+            <!--<p>Use the slider and pick a Nic. Hit that submit button when you're done.</p>-->
+                <form class='cageForm' id='cageForm' action=' '>
+                    <img class="cage-left" src="assets/nic-5.jpg" alt="">
+                    <input class='slider' type='range' min='0.5' max='2' step='0.5' value='2' name='cageRange' id='cageRange'>
+                    <img class="cage-right" src="assets/nic-1.png" alt="">
+                </form>
+            
+            <div class="submitContainer">
+                <input class="button rangeSubmit" name='cageRange' id='cageRange' type='submit' form='cageForm'>
+            </div>
+
+        </div>
+    </section>
+    <!-- ./chooseOccasion -->
+
+
+    <section class="results" id="results">
+        <div class="wrapper">
+            <!-- display results and reset button-->
+            <div class=resultsContainer>
+                <div class="result" id="result">
+                </div>
+                <div class="movieDescription" id="movieDescription">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>gifs from <a href="giphy.com">giphy</a>, api data from <a href="https://www.themoviedb.org/">themoviedb</a></p>
+    </footer>
+    <script src="src/underscore.js "></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js "></script>
+    <script src="src/scripts.js "></script>
+</body>
+
+</html>

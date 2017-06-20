@@ -1,0 +1,80 @@
+// * {
+//     border: 1px solid red;
+// }
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: $gold-background;
+}
+
+p {
+    color: $nearly-black;
+    font-family: $base-font;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: $white;
+    height: 25px;
+    text-align: center;
+
+    & a {
+        color: $title-colour;
+        transition: 0.2s all;
+
+        &:hover {
+            color: $nearly-burgundy;
+        }
+    }
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media(max-width: 320px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+h1,
+h2 {
+     font-family: $heading-font-family;
+     text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4rem;
+    position: relative;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+
+@media(max-width: 730px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.userChoice {
+    // height: 70vh;
+    background-color: $gold-background;
+}
+
+.hide {
+    display: none;
+}
+
+

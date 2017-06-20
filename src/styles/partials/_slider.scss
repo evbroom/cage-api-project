@@ -1,0 +1,94 @@
+// slider style generated from: http://danielstern.ca/range.css/#/
+
+.cage-left {
+    width: 50px;
+}
+
+.cage-right {
+    width: 50px;
+}
+
+input[type=range].slider {
+  -webkit-appearance: none;
+  width: 50%;
+  margin: 0.2px 0;
+}
+
+input[type=range].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 26.6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #f5f5f5;
+  border-radius: 2px;
+  border: 0px solid #010101;
+}
+input[type=range].slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 27px;
+  width: 27px;
+  border-radius: 2px;
+  background: url("/assets/nic-5.jpg");
+  background: rgba(147, 0, 4, 0.93);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.2px;
+}
+input[type=range].slider:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type=range].slider::-moz-range-track {
+  width: 100%;
+  height: 26.6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #f5f5f5;
+  border-radius: 2px;
+  border: 0px solid #010101;
+}
+input[type=range].slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 27px;
+  width: 27px;
+  border-radius: 2px;
+  background: rgba(147, 0, 4, 0.93);
+  cursor: pointer;
+}
+input[type=range].slider::-ms-track {
+  width: 100%;
+  height: 26.6px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].slider::-ms-fill-lower {
+  background: #d4d4d4;
+  border: 0px solid #010101;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range].slider::-ms-fill-upper {
+  background: #f5f5f5;
+  border: 0px solid #010101;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range].slider::-ms-thumb {
+  box-shadow: 0px 0px 0px #670000, 0px 0px 0px #810000;
+  border: 0px solid #ff1e00;
+  height: 27px;
+  width: 27px;
+  border-radius: 2px;
+  background: rgba(147, 0, 4, 0.93);
+  cursor: pointer;
+  height: 26.6px;
+}
+input[type=range].slider:focus::-ms-fill-lower {
+  background: #f5f5f5;
+}
+input[type=range].slider:focus::-ms-fill-upper {
+  background: #ffffff;
+}

@@ -1,0 +1,57 @@
+.movieTitle {
+    
+}
+
+.movieLink {
+    color: $title-colour;
+    transition: 0.2s all;
+
+    &:hover {
+        color: $nearly-burgundy;
+    }
+}
+.resultsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-left: 40px;
+}
+
+.movieDescription p {
+    line-height: 1.5;
+}
+
+.hideButton {
+    display: none;
+}
+
+@media(max-width: 770px) {
+
+    .resultsContainer {
+        flex-direction: column;
+    }
+
+    .movieDescription {
+        margin-left: 0;
+    }
+
+    .movieResult {
+        text-align: center;
+        padding-top: 60px;
+    }
+}

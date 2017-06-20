@@ -1,0 +1,113 @@
+span {
+    display: inline-block;
+}
+
+.title {
+    text-align: center;
+}
+
+.heading-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedHeading {
+    color: $title-colour;
+    margin: 0 20px;
+}
+
+.heading-break {
+    display: block;
+}
+
+.spinning-nic {
+    width: 75px;
+    display: none;
+}
+
+.spin {
+    display: block;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.cageSpan {
+    display: none;
+    position: absolute;
+    content: 'cage';
+    right: 37%;
+    bottom: 0;
+    font-size: 4.5rem;
+    color: $nearly-burgundy;
+    font-family: $cage-font-family;
+    transform: rotate(-11deg);
+    letter-spacing: .35rem;
+}
+
+.perma {
+    display: block;
+}
+
+.lightenText {
+    color: #dbdde0;
+}
+
+
+.button {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background: $green-accent;
+    color: $white;
+    border-radius: 2px;
+    letter-spacing: 1.2px;
+    font-size: 1rem;
+    transition: all 0.1s ease-out;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        background: #026060;
+    }
+}
+
+
+@media (max-width: 730px) {
+    .cageSpan {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .spinning-nic {
+        width: 50px;
+    }
+} 
+
+@media (max-width: 440px) {
+    .spinning-nic,
+    .cageSpan 
+    {
+        display: none;
+    }
+
+    .lightenText {
+        color: #ef0e14;
+    }
+
+}
+
+
+
+
+
+
