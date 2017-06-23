@@ -67,6 +67,7 @@ cageApp.events = function () {
     cageApp.submitForm();
     cageApp.hideSections();
     cageApp.showDefaultGif();
+    cageApp.smoothScroll();
 };
 
 // get a top and bottom number to compare against user input
@@ -166,6 +167,15 @@ cageApp.hideSections = function () {
         $('.four').show();
     })
 };
+
+cageApp.smoothScroll = function () {
+$(document).on('click touchstart', 'a[href^="#"]', function (event) {
+		event.preventDefault();
+		var targetId = $(this).attr('href');
+		var position = $(targetId).offset().top;
+		$('body, html').animate({ scrollTop: position }, 1500);
+	});
+}
 
 cageApp.showDefaultGif = () => $('.four').show();
 
