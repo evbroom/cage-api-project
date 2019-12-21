@@ -75,20 +75,20 @@ cageApp.events = function () {
 cageApp.convertStringToNumber = function (usersChoice) {
     // refactor this
     if (usersChoice === '0.5') {
-        const bottomChoice = 0;
+        const bottomChoice = 4;
         const topChoice = bottomChoice + 0.5;
         cageApp.filterResults(topChoice, bottomChoice)
     } else if (usersChoice === '1') {
-        const bottomChoice = 0.5;
+        const bottomChoice = 5;
         const topChoice = bottomChoice + 0.5;
         cageApp.filterResults(topChoice, bottomChoice)
     } else if (usersChoice === '1.5') {
-        const bottomChoice = 1;
+        const bottomChoice = 6;
         const topChoice = bottomChoice + 0.5;
         cageApp.filterResults(topChoice, bottomChoice)
     } else {
-        const bottomChoice = 2;
-        const topChoice = bottomChoice + 2;
+        const bottomChoice = 7;
+        const topChoice = bottomChoice + 1;
         cageApp.filterResults(topChoice, bottomChoice)
     };
 };
@@ -100,7 +100,7 @@ cageApp.filterResults = function (topChoice, bottomChoice) {
     // return values between the two choices
 
     let selectedMovies = cageApp.finalMovies.filter(function (el) {
-        return (el.popularity < topChoice && el.popularity > bottomChoice);
+        return (el.vote_average < topChoice && el.vote_average > bottomChoice);
     })
     cageApp.displaySelectedMovie(_.sample(selectedMovies));
 };
